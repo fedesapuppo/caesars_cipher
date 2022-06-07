@@ -20,7 +20,8 @@
 
 # description
 
-# takes a string and an integer number, each string's character from "a" to "z" and from "A" to "Z"  is replaced by a letter some fixed number of positions down the alphabet (indicated by "key" number).
+# takes a string and an integer number, each string's character from "a" to "z" and from "A" to "Z"  is replaced by
+# a letter some fixed number of positions down the alphabet (indicated by "key" number).
 
 # body
 
@@ -41,27 +42,3 @@ class Cipher
     p new_string.join
   end
 end
-
-# test (MOVE TESTS TO caesars_cipher_spec.rb to properly test the file)
-
-# cipher('abcABC', 1)
-# => "bcdBCD"
-
-# cipher('What a string!', 5)
-# => "Bmfy f xywnsl!"
-
-# it ciphers letters one position down the alphabet
-# cipher('abc', 1)
-# => "bcd"
-
-# it ciphers letters "key" positions while keeping the same case
-# cipher('fgtGHF', 2)
-# => "hivIJH"
-
-# it ciphers letters while ignoring numbers and special characters
-# cipher('What a string!@%$#123', 5)
-# => "Bmfy f xywnsl!@%$#"
-
-# it chipers correctly when "key" value implies starting the alphabet over
-# cipher('xyz', 3)
-# => "abc"
